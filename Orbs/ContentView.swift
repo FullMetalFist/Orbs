@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             RealityView { content in
-                guard let model = try? await ModelEntity(named: "Orbs") else { return }
+                guard let model = try? await Entity(named: "Orbs") else { return }
                 model.scale = [1, 1, 1]
                 content.add(model)
             }
